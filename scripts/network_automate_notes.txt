@@ -1,0 +1,18 @@
+
+from __future__ import absolute_import, division, print_function
+
+
+def get_input(prompt=''):
+	try:
+		line = raw_input(prompt)
+	except NameError:
+		line = input(prompt
+	return line
+
+
+gevent_url = 'http://www.gevent.org/gevent.socket.html'
+brocade_composer_url = 'https://bwc-docs.brocade.com/index.html'
+jinja2_url = 'http://jinja.pocoo.org/docs/dev/intro/#basic-api-usage'
+
+
+

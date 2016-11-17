@@ -1,0 +1,9 @@
+ip fabric = brocade
+stack storm = pack
+
+# WorkFlow
+- BWC
+ICX = stack storm
+VDX = stack storm
+
+# Mistral work flow

@@ -1,0 +1,777 @@
+#####################
+### 12 Data types ### 
+#####################
+strings
+numbers
+booleans
+lists
+tuples
+dictionaries
+sets
+
+var1 = "hello"
+type(var1)
+
+#####################
+### 13 Strings 	  ###
+#####################
+index strings!!!
+[0] [-1] [-4]
+
+string1 = "Cisco Router"
+len(string1)
+
+##########################
+### 14 Strings methods ###
+##########################
+a = "Cisco Switch"
+b = "   Cisco Switch   "
+c = "$$$Cisco Switch$$$"
+d = "cisco, brocade, juniper, arista"
+
+
+a.index("i") # verifica se contem a letra na string
+a.count("i") # conta as letras na string
+a.find("sco") # localiza as letras na string
+a.lower() # converte a string para letras minusculas
+a.upper() # converte a string para letras maiusculas
+
+b.strip() # Remove os espaços da string
+c.strip($) # Remove os caracteres $ da string
+b.replace(" ", "") # Remove os espaços em branco da string
+
+d.splite(",") # Divide a string pelas virgulas e tranforma em uma lista
+
+"_".join(a) # Junta os elementos com o caractere definido "_"
+
+###########################
+### 15 String Operators ###
+###########################
+x = "Cisco"
+y = "Switch"
+
+x + y
+x * 3
+
+"o" in x
+"b" not in y
+
+'Cisco model: 2600XM, 2 WAN slots, IOS 12.4'
+
+'Cisco model: %s, %s WAN slots, IOS %s' % ('2691','4','12.4') # marcadores
+%s = string
+%d = numbers
+%f = float
+
+########################
+### 16 String Slices ###
+########################
+string1 = 'O E2 10.110.8.9 [160/5] via 10.119.254.6, 0:01:00, Ethernet2'
+>>> string1
+'O E2 10.110.8.9 [160/5] via 10.119.254.6, 0:01:00, Ethernet2'
+
+>>> string1[5:15]
+'10.110.8.9'
+
+>>> string1[5:]
+'10.110.8.9 [160/5] via 10.119.254.6, 0:01:00, Ethernet2'
+
+>>> string1[:10]
+'O E2 10.11'
+
+>>> string1[:]
+'O E2 10.110.8.9 [160/5] via 10.119.254.6, 0:01:00, Ethernet2'
+
+>>> string1[-1]
+'2'
+>>> string1[-2]
+'t'
+
+>>> string1[-9:]
+'Ethernet2'
+
+>>> string1[-9:-1]
+'Ethernet'
+
+>>> string1[-5:]
+'rnet2'
+
+>>> string1[:-5]
+'O E2 10.110.8.9 [160/5] via 10.119.254.6, 0:01:00, Ethe'
+
+>>> string1[::2]
+'OE 01089[6/]va1.1.5.,00:0 tent'
+
+>>> string1[::-1]
+'2tenrehtE ,00:10:0 ,6.452.911.01 aiv ]5/061[ 9.8.011.01 2E O']
+
+#################################
+### 17 Numbers math Operators ###
+#################################
+>>> num1 = 10
+>>> num2 = 2.5
+
+>>> type(num1)
+<type 'int'>
+>>> type(num2)
+<type 'float'>
+
+>>> 1 + 2
+3
+>>> 3 - 1
+2
+>>> 4 / 2
+2
+>>> 3 * 7
+21
+>>> 4 ** 2
+16
+>>> 5 % 2
+1
+>>> 4 < 5
+True
+>>> 5 > 4
+True
+>>> 4 <= 5
+True
+>>> 5 >= 4
+True
+>>> 5 == 5
+True
+>>> 4!=5
+True
+>>>
+>>> 3 / 2
+1
+>>> 3.0 / 2
+1.5
+>>> 3 / 2.0
+1.5
+
+>>> 100 - 5 ** 2 / 5 * 2
+90
+
+# Ordem das operações
+- evelação
+- Divisão / Multiplicação
+- Soma / Subtração
+
+funções
+- int()
+- float()
+- abs()
+- max()
+- min()
+- pow(3,2)
+
+#################################
+### 18 Booleans and Logical   ###
+#################################
+>>> (1 == 1) and (2 == 2)
+True
+>>> (1 == 2) and (2 == 3)
+False
+>>> (1 == 2) and (2 == 2)
+False
+>>> (1 == 1) or (2 == 2)
+True
+>>> (1 == 1) or (2 == 3)
+True
+>>> (1 == 2) or (2 == 3)
+False
+>>> not(1==1)
+False
+>>> not(1==2)
+True
+>>>
+## Não booleans
+None, 0, 0.0, 0L, 0j, empty, empty list, empty tuple, empty dictionarie
+>>> bool(None)
+False
+
+>>> bool(0)
+False
+
+>>> lists = []
+>>> bool(lists)
+False
+
+>>> lists.append(1)
+>>> bool(lists)
+True
+
+
+#################################
+### 19 Lists introduction     ###
+#################################
+>>> list1 = []
+>>> list1
+[]
+>>> type(list1)
+<type 'list'>
+>>>
+>>>
+>>> list1 = ["Cisco","Juniper","Arista",10,10.5,-11]
+>>> list1
+['Cisco', 'Juniper', 'Arista', 10, 10.5, -11]
+>>> len(list1)
+6
+>>> list1[0]
+'Cisco'
+>>> list1[1]
+'Juniper'
+>>> list1[-1]
+-11
+>>> list1[-2]
+10.5
+>>> list1
+['Cisco', 'Juniper', 'Arista', 10, 10.5, -11]
+>>> list1[2]
+'Arista'
+>>>
+>>> list1[2] = "Nuage"
+>>>
+>>> list1
+['Cisco', 'Juniper', 'Nuage', 10, 10.5, -11]
+>>>
+
+list2 = ['Cisco','Juniper','Arista','HP','Nokia']
+
+if list2.__contains__("Cisco") == True:
+	i = list2.index("Cisco")
+	list2[i] = "Brocade"
+else:
+	print "Cisco não foi encontrado"
+
+
+#################################
+### 20 Lists Methods          ###
+#################################
+>>> list1
+['Cisco', 'Juniper', 'Arista', 10, 10.5, -11]
+>>> list1
+['Cisco', 'Juniper', 'Arista', 10, 10.5, -11, 100]
+>>> del list1[4]
+>>> list1
+['Cisco', 'Juniper', 'Arista', 10, -11, 100]
+>>> list1.pop(0)
+'Cisco'
+>>> list1
+['Juniper', 'Arista', 10, -11, 100]
+>>> list1.remove("Arista")
+>>> list1
+['Juniper', 10, -11, 100]
+>>> list1.insert(2, "Nortel")
+>>> list1
+['Juniper', 10, 'Nortel', -11, 100]
+>>> list2 = [9,99,999]
+>>> list2
+[9, 99, 999]
+>>> list1
+['Juniper', 10, 'Nortel', -11, 100]
+>>> list2
+[9, 99, 999]
+>>> list1.extend(list2)
+>>> list1
+['Juniper', 10, 'Nortel', -11, 100, 9, 99, 999]
+>>> list1
+['Juniper', 10, 'Nortel', -11, 100, 9, 99, 999]
+>>> list1.index(-11)
+3
+>>> list1.append(10)
+>>> list1
+['Juniper', 10, 'Nortel', -11, 100, 9, 99, 999, 10]
+>>> list1.count(10)
+2
+>>> list2
+[9, 99, 999]
+>>>
+>>> list2.append(1)
+>>> list2.append(25)
+>>> list2.append(500)
+>>>
+>>> list2
+[9, 99, 999, 1, 25, 500]
+>>>
+>>>
+>>> list2.sort()
+>>>
+>>> list2
+[1, 9, 25, 99, 500, 999]
+>>> list2.reverse()
+>>> list2
+[999, 500, 99, 25, 9, 1]
+
+>>> sorted(list2)
+[1, 9, 25, 99, 500, 999]
+>>>
+>>> list2
+[999, 500, 99, 25, 9, 1]
+>>> sorted(list2, reverse = True)
+[999, 500, 99, 25, 9, 1]
+>>>
+>>> list2
+[999, 500, 99, 25, 9, 1]
+>>> help(sorted)
+>>> list1 + list2
+['Juniper', 10, 'Nortel', -11, 100, 9, 99, 999, 10, 999, 500, 99, 25, 9, 1]
+>>> list2 * 3
+[999, 500, 99, 25, 9, 1, 999, 500, 99, 25, 9, 1, 999, 500, 99, 25, 9, 1]
+
+#################################
+### 21 Lists Slices           ###
+#################################
+>>> list3 = [1,2,3,'a','b','c']
+>>>
+>>> list3
+[1, 2, 3, 'a', 'b', 'c']
+>>>
+>>> list3[0:3]
+[1, 2, 3]
+>>>
+>>> list3[:3]
+[1, 2, 3]
+>>>
+>>> list3[2:5]
+[3, 'a', 'b']
+>>>
+>>> list3[3:]
+['a', 'b', 'c']
+>>>
+>>> list3[-3]
+'a'
+>>> list3[-3:3]
+[]
+>>> list3[-3:]
+['a', 'b', 'c']
+>>>
+>>> list3[:3]
+[1, 2, 3]
+>>> list3[:]
+[1, 2, 3, 'a', 'b', 'c']
+>>>
+>>> list3[-4:-1]
+[3, 'a', 'b']
+>>>
+>>> list3[::2]
+[1, 3, 'b']
+>>>
+>>> list3[::-1]
+['c', 'b', 'a', 3, 2, 1]
+
+#################################
+### 22 Sets introductions     ###
+#################################
+>>> list4 = [1,2,3,4,5,2,3]
+>>> list4
+[1, 2, 3, 4, 5, 2, 3]
+>>> set(list4)
+set([1, 2, 3, 4, 5])
+>>>
+>>> set1 = set([11,12,13,14,15,15,15])
+>>>
+>>> set1
+set([11, 12, 13, 14, 15])
+>>> type(set1)
+<type 'set'>
+>>> list4
+[1, 2, 3, 4, 5, 2, 3]
+>>>
+>>> set2 = {11,12,13,14,15,15,15}
+>>>
+>>> set2
+set([11, 12, 13, 14, 15])
+>>> type(set2)
+<type 'set'>
+>>>
+>>> len(set2)
+5
+>>> 11 in set2
+True
+>>> 10 in set2
+False
+>>> 10 not in set2
+True
+>>> 10 not in set1
+True
+>>> set2.add(16)
+>>> set2
+set([11, 12, 13, 14, 15, 16])
+>>> set2.remove(11)
+>>> set2
+set([12, 13, 14, 15, 16])
+>>> set2.add(16)
+>>> set2
+set([12, 13, 14, 15, 16])
+
+#################################
+### 23 Sets methods           ###
+#################################
+>>> set1 = {'1.1.1.1','2.2.2.2','4.4.4.4','3.3.3.3'}
+>>> set1 = {'1.1.1.1','2.2.2.2','4.4.4.4','3.3.3.3'}
+>>> set2 = {'3.3.3.3','8.8.8.8','5.5.5.5'}
+>>>
+>>>
+>>> set1
+set(['1.1.1.1', '2.2.2.2', '3.3.3.3', '4.4.4.4'])
+>>> set2
+set(['3.3.3.3', '5.5.5.5', '8.8.8.8'])
+>>>
+>>>
+>>> set1.intersection(set2)
+set(['3.3.3.3'])
+>>>
+>>>
+>>>
+>>> set2.intersection(set1)
+set(['3.3.3.3'])
+>>>
+>>>
+>>> set1.difference(set2)
+set(['4.4.4.4', '1.1.1.1', '2.2.2.2'])
+>>>
+>>>
+>>> set2.difference(set1)
+set(['5.5.5.5', '8.8.8.8'])
+>>>
+>>>
+>>> set1.union(set2)
+set(['5.5.5.5', '2.2.2.2', '3.3.3.3', '8.8.8.8', '4.4.4.4', '1.1.1.1'])
+>>>
+>>>
+>>> set1
+set(['1.1.1.1', '2.2.2.2', '3.3.3.3', '4.4.4.4'])
+>>> set3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'set3' is not defined
+>>> set2
+set(['3.3.3.3', '5.5.5.5', '8.8.8.8'])
+>>> set1.pop()
+'1.1.1.1'
+>>> set1
+set(['2.2.2.2', '3.3.3.3', '4.4.4.4'])
+>>>
+>>> set2.remove("5.5.5.5")
+>>>
+>>> set2
+set(['3.3.3.3', '8.8.8.8'])
+>>>
+>>> set1.clear()
+>>>
+>>> set1
+set([])
+>>>
+
+#################################
+### 24 Tuples introduction    ###
+#################################
+>>> my_tuple = ()
+>>> type(my_tuple)
+<type 'tuple'>
+>>> my_tuple = (9)
+>>> type(my_tuple)
+<type 'int'>
+>>> my_tuple = (9,)
+>>> type(my_tuple)
+<type 'tuple'>
+>>> my_tuple = (1,2,3,4,5)
+>>> my_tuple
+(1, 2, 3, 4, 5)
+>>>
+>>>
+>>> my_tuple[0]
+1
+>>> my_tuple[1]
+2
+>>> my_tuple[-1]
+5
+>>> my_tuple[-2]
+4
+>>> my_tuple[1] = 10
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>>
+>>> del my_tuple[1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object doesn't support item deletion'
+>>>
+>>>
+>>>
+>>> tuple1 = ("Cisco", "2600", "12.4")
+>>> tuple1
+('Cisco', '2600', '12.4')
+>>>
+>>> (vendor, model, ios) = tuple1
+>>>
+>>> vendor
+'Cisco'
+>>> model
+'2600'
+>>> ios
+'12.4'
+>>> tuple1
+('Cisco', '2600', '12.4')
+>>>
+>>>
+>>> tuple2 = (1,2,3,4)
+>>>
+>>> (x,y,z) = tuple2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack
+>>>
+>>>
+>>>
+>>> (a,b,c) = (10,20,30)
+>>>
+>>> a
+10
+>>> b
+20
+>>> c
+30
+
+#################################
+### 25 Tuples Methods         ###
+#################################
+>>> tuple2 = (1,2,3,4)
+>>>
+>>>
+>>> len(tuple2)
+4
+>>> min(tuple2)
+1
+>>> max(tuple2)
+4
+>>> tuple2 + (5,6,7)
+(1, 2, 3, 4, 5, 6, 7)
+>>> tuple2
+(1, 2, 3, 4)
+>>> tuple2 * 4
+(1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
+>>>
+>>>
+>>> tuple2
+(1, 2, 3, 4)
+>>>
+>>> tuple2[0:2]
+(1, 2)
+>>> tuple2[:2]
+(1, 2)
+>>>
+>>>
+>>> tuple2[1:]
+(2, 3, 4)
+>>>
+>>>
+>>> tuple2[:]
+(1, 2, 3, 4)
+>>> tuple2[-1]
+4
+>>> tuple2[:-2]
+(1, 2)
+>>>
+>>> tuple2[::-1]
+(4, 3, 2, 1)
+>>>
+>>>
+>>> 3 in tuple2
+True
+>>>
+>>> 5 in tuple2
+False
+>>>
+>>>
+>>>
+>>>
+>>> del tuple2
+>>>
+>>> tuple2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'tuple2' is not defined
+
+#######################################
+### 26 Dictionaries introduction    ###
+#######################################
+>>> dict1 = {}
+>>> dict1
+{}
+>>> type(dict1)
+<type 'dict'>
+>>>
+>>> dict1 = {"Vendor": "Cisco", "Model": "2600", "IOS": "12.4", "Ports": "4"}
+>>>
+>>> dict1
+{'IOS': '12.4', 'Model': '2600', 'Vendor': 'Cisco', 'Ports': '4'}
+>>>
+>>> d1 = {1: "first element", 2: "second element"}
+>>>
+>>> d1
+{1: 'first element', 2: 'second element'}
+>>>
+>>> dict1
+{'IOS': '12.4', 'Model': '2600', 'Vendor': 'Cisco', 'Ports': '4'}
+>>>
+
+#################################
+### 27 Dictionaries Methods   ###
+#################################
+>>> dict1["IOS"]
+'12.4'
+>>> dict1["Vendor"]
+'Cisco'
+>>> dict1["RAM"] = "128"
+>>>
+>>> dict1
+{'IOS': '12.4', 'Model': '2600', 'RAM': '128', 'Vendor': 'Cisco', 'Ports': '4'}
+>>>
+>>> dict1["IOS"] = "12.3"
+>>>
+>>> dict1
+{'IOS': '12.3', 'Model': '2600', 'RAM': '128', 'Vendor': 'Cisco', 'Ports': '4'}
+>>>
+>>> del dict1["Ports"]
+>>>
+>>> dict1
+{'IOS': '12.3', 'Model': '2600', 'RAM': '128', 'Vendor': 'Cisco'}
+>>>
+>>> len(dict1)
+4
+>>> "IOS" in dict1
+True
+>>> "IOS2" in dict1
+False
+>>> "IOS2" not in dict1
+True
+>>>
+>>> dict1.keys()
+['IOS', 'Model', 'RAM', 'Vendor']
+>>> dict1.values()
+['12.3', '2600', '128', 'Cisco']
+>>>
+>>> dict1.items()
+[('IOS', '12.3'), ('Model', '2600'), ('RAM', '128'), ('Vendor', 'Cisco')]
+>>>
+>>>
+>>> dict1
+{'IOS': '12.3', 'Model': '2600', 'RAM': '128', 'Vendor': 'Cisco'}
+>>>
+>>>
+>>> dict1.keys()
+['IOS', 'Model', 'RAM', 'Vendor']
+>>> dict1.values()
+['12.3', '2600', '128', 'Cisco']
+>>> dict1.items()
+[('IOS', '12.3'), ('Model', '2600'), ('RAM', '128'), ('Vendor', 'Cisco')]
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> dict1["UPTIME"] = ""
+>>>
+>>> dict1.keys
+<built-in method keys of dict object at 0x7f450c4c1e88>
+>>> dict1.keys()
+['IOS', 'Model', 'RAM', 'Vendor', 'UPTIME']
+
+#################################
+### 28 Conversions Data Types ###
+#################################
+>>> num = 2
+>>> flt = 2.5
+>>>
+>>> type(num)
+<type 'int'>
+>>> type(flt)
+<type 'float'>
+>>>
+>>>
+>>> num1 = str(num)
+>>>
+>>> type(num1)
+<type 'str'>
+>>>
+>>>
+>>> flt1 = str(flt)
+>>>
+>>> flt1
+'2.5'
+>>> type(flt1)
+<type 'str'>
+>>>
+>>>
+>>> str = "5"
+>>>
+>>> str1 = int(str)
+>>> type(str1)
+<type 'int'>
+>>>
+>>>
+>>> str1
+5
+>>>
+>>> f = float(num)
+>>> type(f)
+<type 'float'>
+>>> f
+2.0
+>>> f1 = int(flt)
+>>>
+>>> f1
+2
+>>>
+>>> type(f1)
+<type 'int'>
+>>>
+>>>
+>>> tupl = (1,2,3)
+>>> tupl
+(1, 2, 3)
+>>> type(tupl)
+>>> list1 = list(tupl)
+>>>
+>>> list1
+[1, 2, 3]
+>>>
+>>> tup = tuple(list1)
+>>>
+>>> tup
+(1, 2, 3)
+>>>
+>>> list1
+[1, 2, 3]
+>>>
+>>> set1 = set(list1)
+>>>
+>>> set1
+set([1, 2, 3])
+>>>
+>>> type(set1)
+<type 'set'>
+>>>
+>>> num = 10
+>>>
+>>> num_bin = bin(num)
+>>> num_bin
+'0b1010'
+>>>
+>>> num_hex = hex(num)
+>>> num_hex
+'0xa'
+>>> bin_to_num = int(num_bin, 2)
+>>> bin_to_num
+10
+>>> hex_to_num = int(num_hex, 16)
+>>> hex_to_num
+10
+
+
+
+
+
+

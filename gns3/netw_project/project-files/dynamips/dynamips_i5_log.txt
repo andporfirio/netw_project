@@ -1,0 +1,34 @@
+Nov 17 21:36:38.793 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Nov 17 21:36:38.793 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51112.
+Nov 17 21:36:39.058 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 17 21:36:39.059 HYPERVISOR: exec_cmd: hypervisor uuid 
+Nov 17 21:36:39.060 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/anderson/Documents/Project_Python/network_project/gns3/netw_project/project-files/dynamips 
+Nov 17 21:36:39.060 GENERAL: working_dir=/Users/anderson/Documents/Project_Python/network_project/gns3/netw_project/project-files/dynamips
+Nov 17 21:36:39.062 HYPERVISOR: exec_cmd: ethsw create SW-MGMT 
+Nov 17 21:36:44.848 HYPERVISOR: exec_cmd: nio create_udp udp-a24cb87c-0977-4611-ac40-f4f30cafe614 10001 127.0.0.1 10000 
+Nov 17 21:36:44.849 HYPERVISOR: exec_cmd: ethsw add_nio SW-MGMT udp-a24cb87c-0977-4611-ac40-f4f30cafe614 
+Nov 17 21:36:44.865 HYPERVISOR: exec_cmd: ethsw set_access_port SW-MGMT udp-a24cb87c-0977-4611-ac40-f4f30cafe614 1 
+Nov 17 21:36:44.885 HYPERVISOR: exec_cmd: nio create_udp udp-792f25e5-a1df-45cc-aea8-8a24eac1876b 10002 127.0.0.1 10003 
+Nov 17 21:36:44.885 HYPERVISOR: exec_cmd: ethsw add_nio SW-MGMT udp-792f25e5-a1df-45cc-aea8-8a24eac1876b 
+Nov 17 21:36:44.907 HYPERVISOR: exec_cmd: ethsw set_access_port SW-MGMT udp-792f25e5-a1df-45cc-aea8-8a24eac1876b 1 
+Nov 17 21:37:06.678 HYPERVISOR: exec_cmd: nio create_udp udp-a98b5982-78e7-4c71-bc42-da158dbaff4d 10005 127.0.0.1 10004 
+Nov 17 21:37:06.684 HYPERVISOR: exec_cmd: ethsw add_nio SW-MGMT udp-a98b5982-78e7-4c71-bc42-da158dbaff4d 
+Nov 17 21:37:06.728 HYPERVISOR: exec_cmd: ethsw set_access_port SW-MGMT udp-a98b5982-78e7-4c71-bc42-da158dbaff4d 1 
+Nov 17 21:37:06.776 HYPERVISOR: exec_cmd: nio create_udp udp-647d29a5-e0e7-482c-a0bd-a4af5e65c5c6 10006 127.0.0.1 10007 
+Nov 17 21:37:06.798 HYPERVISOR: exec_cmd: ethsw add_nio SW-MGMT udp-647d29a5-e0e7-482c-a0bd-a4af5e65c5c6 
+Nov 17 21:37:06.831 HYPERVISOR: exec_cmd: ethsw set_access_port SW-MGMT udp-647d29a5-e0e7-482c-a0bd-a4af5e65c5c6 1 
+Nov 17 21:37:06.852 HYPERVISOR: exec_cmd: nio create_udp udp-ed362317-7d77-432e-82f6-4af425c67118 10008 127.0.0.1 10009 
+Nov 17 21:37:06.887 HYPERVISOR: exec_cmd: ethsw add_nio SW-MGMT udp-ed362317-7d77-432e-82f6-4af425c67118 
+Nov 17 21:37:06.918 HYPERVISOR: exec_cmd: ethsw set_access_port SW-MGMT udp-ed362317-7d77-432e-82f6-4af425c67118 1 
+Nov 17 21:37:06.940 HYPERVISOR: exec_cmd: nio create_udp udp-f72f90ec-b097-4569-826b-94a4dab499df 10010 127.0.0.1 10011 
+Nov 17 21:37:06.941 HYPERVISOR: exec_cmd: ethsw add_nio SW-MGMT udp-f72f90ec-b097-4569-826b-94a4dab499df 
+Nov 17 21:37:06.954 HYPERVISOR: exec_cmd: ethsw set_access_port SW-MGMT udp-f72f90ec-b097-4569-826b-94a4dab499df 1 
+Nov 17 21:37:06.974 HYPERVISOR: exec_cmd: nio create_udp udp-e921fbd9-c1eb-4e31-9035-9cfcb1a9231d 10012 127.0.0.1 10013 
+Nov 17 21:37:06.974 HYPERVISOR: exec_cmd: ethsw add_nio SW-MGMT udp-e921fbd9-c1eb-4e31-9035-9cfcb1a9231d 
+Nov 17 21:37:06.977 HYPERVISOR: exec_cmd: ethsw set_access_port SW-MGMT udp-e921fbd9-c1eb-4e31-9035-9cfcb1a9231d 1 
+Nov 17 21:37:17.552 HYPERVISOR: exec_cmd: ethsw remove_nio SW-MGMT udp-a24cb87c-0977-4611-ac40-f4f30cafe614 
+Nov 17 21:37:17.557 HYPERVISOR: exec_cmd: nio delete udp-a24cb87c-0977-4611-ac40-f4f30cafe614 
+Nov 17 21:37:32.769 HYPERVISOR: exec_cmd: ethsw delete SW-MGMT 
+Nov 17 21:37:32.910 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 17 21:37:33.345 HYPERVISOR: Stopped.
+Nov 17 21:37:33.345 GENERAL: reset done.

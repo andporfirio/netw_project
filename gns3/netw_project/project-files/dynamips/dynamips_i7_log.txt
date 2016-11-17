@@ -1,0 +1,33 @@
+Nov 17 21:36:39.112 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Nov 17 21:36:39.112 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51369.
+Nov 17 21:36:39.127 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 17 21:36:39.129 HYPERVISOR: exec_cmd: hypervisor uuid 
+Nov 17 21:36:39.130 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/anderson/Documents/Project_Python/network_project/gns3/netw_project/project-files/dynamips 
+Nov 17 21:36:39.131 GENERAL: working_dir=/Users/anderson/Documents/Project_Python/network_project/gns3/netw_project/project-files/dynamips
+Nov 17 21:36:39.133 HYPERVISOR: exec_cmd: vm create ESW3 6 c3725 
+Nov 17 21:36:39.133 VM: VM ESW3 created.
+Nov 17 21:36:39.136 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW3 2007 
+Nov 17 21:36:39.137 HYPERVISOR: exec_cmd: c3725 get_mac_addr ESW3 
+Nov 17 21:36:39.138 HYPERVISOR: exec_cmd: vm set_disk0 ESW3 1 
+Nov 17 21:36:39.139 HYPERVISOR: exec_cmd: vm get_status ESW3 
+Nov 17 21:36:39.139 HYPERVISOR: exec_cmd: vm set_idle_pc ESW3 0x602467a4 
+Nov 17 21:36:39.139 HYPERVISOR: exec_cmd: vm set_ios ESW3 /Users/anderson/GNS3/images/IOS/c3725-adventerprisek9-mz.124-25d.image 
+Nov 17 21:36:39.140 HYPERVISOR: exec_cmd: vm get_status ESW3 
+Nov 17 21:36:39.140 HYPERVISOR: exec_cmd: vm slot_add_binding ESW3 1 0 NM-16ESW 
+Nov 17 21:36:39.141 HYPERVISOR: exec_cmd: c3725 set_mac_addr ESW3 c206.5992.0000 
+Nov 17 21:36:39.141 HYPERVISOR: exec_cmd: vm set_nvram ESW3 256 
+Nov 17 21:36:39.142 HYPERVISOR: exec_cmd: vm set_config ESW3 configs/i6_startup-config.cfg 
+Nov 17 21:37:06.639 HYPERVISOR: exec_cmd: vm set_ghost_status ESW3 2 
+Nov 17 21:37:06.683 HYPERVISOR: exec_cmd: vm set_ghost_file ESW3 c3725-adventerprisek9-mz.124-25d.image-128.ghost 
+Nov 17 21:37:06.887 HYPERVISOR: exec_cmd: nio create_udp udp-25dfc28b-9887-4be3-a93c-93dc88e0a394 10013 127.0.0.1 10012 
+Nov 17 21:37:06.902 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW3 0 0 udp-25dfc28b-9887-4be3-a93c-93dc88e0a394 
+Nov 17 21:37:06.903 HYPERVISOR: exec_cmd: vm get_status ESW3 
+Nov 17 21:37:21.268 HYPERVISOR: exec_cmd: vm extract_config ESW3 
+Nov 17 21:37:21.458 HYPERVISOR: exec_cmd: vm extract_config ESW3 
+Nov 17 21:37:33.354 HYPERVISOR: exec_cmd: vm get_status ESW3 
+Nov 17 21:37:33.356 HYPERVISOR: exec_cmd: vm extract_config ESW3 
+Nov 17 21:37:33.369 HYPERVISOR: exec_cmd: vm delete ESW3 
+Nov 17 21:37:33.369 VM: VM ESW3 destroyed.
+Nov 17 21:37:33.397 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 17 21:37:33.430 HYPERVISOR: Stopped.
+Nov 17 21:37:33.430 GENERAL: reset done.

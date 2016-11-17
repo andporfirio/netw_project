@@ -1,0 +1,20 @@
+!
+username admin privilege 15 password cisco
+!
+line vty 0 4
+privilege level 15
+login local
+transport input ssh
+!
+exit
+!
+ip domain-name lab.local.com
+!
+ip ssh version 2
+ip ssh time-out 60
+ip ssh authentication-retries 3
+!
+!When asked How many bits in the modulus [512]: enter 1024
+crypto key generate rsa
+1024
+!

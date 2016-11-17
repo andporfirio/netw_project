@@ -1,0 +1,312 @@
+####################################
+### 29 If Elif Else conditionals ###
+####################################
+>>> x = 10
+>>>
+>>> if x > 5:
+...     print "x is greater than 5"
+...
+x is greater than 5
+>>>
+>>> x = 4
+>>> if x > 5:
+...     print "x is greater than 5"
+...
+>>> x
+4
+>>>
+>>> if x > 5:
+...     print "x is greater than 5"
+... else:
+...     print "x is NOT greater than 5"
+...
+x is NOT greater than 5
+>>>
+>>>
+>>>
+>>> x = 5
+>>>
+>>> if x > 5:
+...     print "x is greater than 5"
+... elif x == 5:
+...     print "x IS 5"
+... else:
+...     print "x is NOT greater than 5"
+...
+x IS 5
+>>>
+>>>
+>>> type(x)
+<type 'int'>
+>>> type(x) is int
+True
+
+
+####################################
+### 30 For, For Else Loops       ###
+####################################
+>>> vendors
+['Cisco', 'HP', 'Nortel', 'Avaya', 'Juniper']
+>>>
+>>> len(vendors)
+5
+>>> range(5)
+[0, 1, 2, 3, 4]
+>>>
+>>>
+>>> for element_index in range(len(vendors)):
+...     print vendors[element_index]
+...
+Cisco
+HP
+Nortel
+Avaya
+Juniper
+>>>
+>>>
+>>> for index, element in emumerate(vendors):
+...     print "Index is %d" % index
+...     print "Element is %s" %element
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'emumerate' is not defined
+>>> for index, element in enumerate(vendors):
+...     print "Index is %d" % index
+...     print "Element is %s" %element
+...
+Index is 0
+Element is Cisco
+Index is 1
+Element is HP
+Index is 2
+Element is Nortel
+Index is 3
+Element is Avaya
+Index is 4
+Element is Juniper
+>>>
+>>>
+>>> dict_vendors = {}
+>>> dict_vendors
+{}
+>>> type(dict_vendors)
+<type 'dict'>
+>>>
+>>>
+>>> for index, element in enumerate(vendors):
+...     dict_vendors[index] = element
+...     print dict_vendors
+...
+{0: 'Cisco'}
+{0: 'Cisco', 1: 'HP'}
+{0: 'Cisco', 1: 'HP', 2: 'Nortel'}
+{0: 'Cisco', 1: 'HP', 2: 'Nortel', 3: 'Avaya'}
+{0: 'Cisco', 1: 'HP', 2: 'Nortel', 3: 'Avaya', 4: 'Juniper'}
+>>>
+>>> dir(dict_vendors)
+>>> help(dict_vendors.clear)
+
+>>> dict_vendors.clear()
+>>>
+>>> dict_vendors
+{}
+>>>
+>>> for index, element in enumerate(vendors):
+...     dict_vendors[index] = element
+...
+>>> print dict_vendors
+{0: 'Cisco', 1: 'HP', 2: 'Nortel', 3: 'Avaya', 4: 'Juniper'}
+>>>
+
+
+####################################
+### 31 While Else loops          ###
+####################################
+>>> x = 1
+>>> while x <= 10:
+...     print x
+...     x += 1
+...
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+####################################
+### 32 If for while nesting      ###
+####################################
+>>> x = "Cisco"
+>>>
+>>> if "i" in x:
+...     if len(x) > 3:
+...             print x, len(x)
+...
+Cisco 5
+>>>
+>>>
+>>> if ("i" in x) and (len(x) > 3):
+...     print x, len(x)
+...
+Cisco 5
+>>>
+>>>
+>>> list1 = [4,5,6]
+>>> list2 = [10,20,30]
+>>>
+>>> for i in list1:
+...     for j in list1:
+...             print i * j
+...
+16
+20
+24
+20
+25
+30
+24
+30
+36
+>>>
+>>> for i in list1:
+...     for j in list2:
+...             print i * j
+...
+40
+80
+120
+50
+100
+150
+60
+120
+180
+>>>
+>>> for i in list1:
+...     for j in list2:
+...             print i * j
+...     print i
+...
+40
+80
+120
+4
+50
+100
+150
+5
+60
+120
+180
+6
+>>>
+>>> x = 1
+>>> while x <= 10:
+...     print x
+...     x += 1
+...
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+>>> x = 1
+>>> while x <= 10:
+...     z = 5
+...     x += 1
+...     while z <= 10:
+...             print z
+...             z += 1
+
+>>> for number in range(10):
+...     if number <= 5 <= 9:
+...             print number
+...
+
+####################################
+### 33 Break Continue	Pass     ###
+####################################
+
+>>> for number in range(10):
+...     if number == 7:
+...             break
+...     print number
+...
+0
+1
+2
+3
+4
+5
+6
+
+>>> for i in list1:
+...     for j in list2:
+...             if j == 20:
+...                     break
+...             print i * j
+...     print "Outside the nested loop"
+...
+40
+Outside the nested loop
+50
+Outside the nested loop
+60
+Outside the nested loop
+>>>
+
+>>> list1 = [4,5,6]
+>>> list2 = [10,20,30]
+>>>
+>>> for i in list1:
+...     for j in list2:
+...             if j == 20:
+...                     continue
+...             print i * j
+...     print "Outside the nested loop"
+...
+40
+120
+Outside the nested loop
+50
+150
+Outside the nested loop
+60
+180
+Outside the nested loop
+
+for i in range(10):
+	pass
+
+####################################
+### 34 Exceptions			     ###
+####################################
+
+- invalid syntax
+- identention errors
+- Zero division error
+
+
+####################################
+### 35 Try Except Else  	     ###
+####################################
+
+
+
+
+
+
+
+
+

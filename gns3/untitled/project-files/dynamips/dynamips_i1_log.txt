@@ -1,0 +1,51 @@
+Nov 15 15:34:44.903 HYPERVISOR: Release 0.2.12-amd64/Darwin (tag 2014032722)
+Nov 15 15:34:44.903 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52788.
+Nov 15 15:34:44.910 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 15 15:34:44.910 HYPERVISOR: exec_cmd: hypervisor uuid 
+Nov 15 15:34:44.911 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/anderson/Documents/Project_Python/network_project/gns3/untitled/project-files/dynamips 
+Nov 15 15:34:44.911 GENERAL: working_dir=/Users/anderson/Documents/Project_Python/network_project/gns3/untitled/project-files/dynamips
+Nov 15 15:34:44.911 HYPERVISOR: exec_cmd: vm create ESW1 2 c3725 
+Nov 15 15:34:44.912 VM: VM ESW1 created.
+Nov 15 15:34:44.920 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW1 2002 
+Nov 15 15:34:44.920 HYPERVISOR: exec_cmd: c3725 get_mac_addr ESW1 
+Nov 15 15:34:44.921 HYPERVISOR: exec_cmd: c3725 set_mac_addr ESW1 c202.1d7b.0000 
+Nov 15 15:34:44.922 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Nov 15 15:34:44.922 HYPERVISOR: exec_cmd: vm set_idle_pc ESW1 0x602467a4 
+Nov 15 15:34:44.923 HYPERVISOR: exec_cmd: vm set_ios ESW1 /Users/anderson/GNS3/images/IOS/c3725-adventerprisek9-mz.124-25d.image 
+Nov 15 15:34:44.924 HYPERVISOR: exec_cmd: vm set_nvram ESW1 256 
+Nov 15 15:34:44.925 HYPERVISOR: exec_cmd: vm set_disk0 ESW1 1 
+Nov 15 15:34:44.926 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Nov 15 15:34:44.926 HYPERVISOR: exec_cmd: vm slot_add_binding ESW1 1 0 NM-16ESW 
+Nov 15 15:34:44.927 HYPERVISOR: exec_cmd: vm set_config ESW1 configs/i2_startup-config.cfg 
+Nov 15 15:34:44.928 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Nov 15 15:34:44.928 VM: VM Ghost created.
+Nov 15 15:34:44.929 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/anderson/GNS3/images/IOS/c3725-adventerprisek9-mz.124-25d.image 
+Nov 15 15:34:44.930 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Nov 15 15:34:44.930 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3725-adventerprisek9-mz.124-25d.image-128.ghost 
+Nov 15 15:34:44.930 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Nov 15 15:34:44.931 HYPERVISOR: exec_cmd: vm start Ghost 
+Nov 15 15:34:45.449 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Nov 15 15:34:45.449 HYPERVISOR: exec_cmd: vm stop Ghost 
+Nov 15 15:34:45.942 VM: VM Ghost shutdown.
+Nov 15 15:34:45.943 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Nov 15 15:34:45.943 VM: VM Ghost destroyed.
+Nov 15 15:34:45.983 HYPERVISOR: exec_cmd: vm set_ghost_status ESW1 2 
+Nov 15 15:34:45.983 HYPERVISOR: exec_cmd: vm set_ghost_file ESW1 c3725-adventerprisek9-mz.124-25d.image-128.ghost 
+Nov 15 15:34:46.113 HYPERVISOR: exec_cmd: nio create_udp udp-31ce0b9b-4a25-47f2-93f0-d16fa86e2634 10001 127.0.0.1 10000 
+Nov 15 15:34:46.114 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW1 0 0 udp-31ce0b9b-4a25-47f2-93f0-d16fa86e2634 
+Nov 15 15:34:46.114 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Nov 15 15:34:50.974 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Nov 15 15:34:50.975 HYPERVISOR: exec_cmd: vm start ESW1 
+Nov 15 20:43:15.619 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Nov 15 20:43:15.620 HYPERVISOR: exec_cmd: vm stop ESW1 
+Nov 15 20:43:15.688 VM: VM ESW1 shutdown.
+Nov 15 20:43:44.215 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Nov 15 20:43:44.217 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding ESW1 0 0 
+Nov 15 20:43:44.219 HYPERVISOR: exec_cmd: nio delete udp-31ce0b9b-4a25-47f2-93f0-d16fa86e2634 
+Nov 15 20:43:44.221 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Nov 15 20:43:44.221 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Nov 15 20:43:44.229 HYPERVISOR: exec_cmd: vm delete ESW1 
+Nov 15 20:43:44.229 VM: VM ESW1 destroyed.
+Nov 15 20:43:44.230 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 15 20:43:44.526 HYPERVISOR: Stopped.
+Nov 15 20:43:44.527 GENERAL: reset done.

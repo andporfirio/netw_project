@@ -1,0 +1,12 @@
+    output = net_connect.send_command("show ip int brief")
+    result = []
+    for line in output.splitlines():
+        if "/" in line:
+            result.append("%s,%s,%s" % (line.split()[0], line.split()[3], line.split()[-1]))
+
+    for line in result:
+        print line
+    #print(output.splitlines())
+    #break
+
+connect()
