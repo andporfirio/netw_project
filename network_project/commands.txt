@@ -1,0 +1,6 @@
+show version
+show ip interface brief
+show arp
+show interface status
+show mac-adress-table
+dir
